@@ -22,6 +22,5 @@ function converter(rNumeral) {
     console.log(rNumeral + ' = ' + decimalResult)
 }
 
-const prompt = require("prompt-sync")({ sigint: true })
-let romanNumeral = prompt("Roman Numeral: ")
-converter(`${romanNumeral}`)
+const args = process.argv.slice(2)
+converter(`${args[0]}`)
