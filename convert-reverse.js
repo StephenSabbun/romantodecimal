@@ -11,6 +11,5 @@ function convertToRoman(integerValue) {
     }
     console.log(romanResult);
 }
-const prompt = require("prompt-sync")({ sigint: true })
-let integer = prompt("Integer: ")
-convertToRoman(`${integer}`)
+const args = process.argv.slice(2)
+convertToRoman(`${args[0]}`)
